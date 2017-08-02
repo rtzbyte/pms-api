@@ -1,14 +1,17 @@
 ---
-title: API Reference
+title: Booking Suite Developer's Platform
 
 language_tabs:
   - curl
+  - test 2
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
+  - <a hred='#">Footer 2 Test<a/>
 
 includes:
   - errors
+  - errors 2 test
 
 search: true
 ---
