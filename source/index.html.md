@@ -6,7 +6,7 @@ language_tabs:
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a hred='#">Footer 2 Test<a/>
+  - <a hred='#">Footer 2 Test</a>
 
 includes:
   - errors
