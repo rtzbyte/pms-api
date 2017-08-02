@@ -13,7 +13,7 @@ includes:
 search: true
 ---
 
-# Introduction
+# What is the Booking Suite Developer's Platform?
 
 SWITCH.CM builds distribution platforms for airlines & hotels.  Our API allows you to seamlessly synchronize the following data with thousands of booking websites:
 
