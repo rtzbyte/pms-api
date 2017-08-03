@@ -16,7 +16,7 @@ search: true
 
 # Booking Suite Developer Platform
 
-## What is the Booking Suite Developer's Platform
+## What is the Booking Suite Developer Platform
 
 content here
 
@@ -35,8 +35,10 @@ content here
 
 To start, you'll have the following development environments:
 
-- a test xxx.switch.cm account (to simulate a real property)
-- a test booking.com account (to simulate your inventory on an OTA)
+- a test pms (to simulate a real property)
+- a test booking.com account (to simulate inventory on an OTA)
+- a test MySQL database (to view raw data in real-time)
+- authentication keys to a sandbox
 
 > To authorize, use this code:
 
@@ -52,22 +54,22 @@ curl "api_endpoint_here"
 
 ## Retrieve Rooms API
 
-SWITCH.CM uses the Retrieve Rooms message to retrieve a list of active rooms for a property.
+insert content here
 
 ### What are the Retrieved Rooms API use for?
 
-The Retrieve Rooms API allows users of the SWITCH.CM channel manager to see what rooms & rate plans are available to map to your booking channel.  Without the Retrieve Rooms API, SWITCH.CM doesn't have any knowledge of the rooms & rate plans you wish to receive availability & rates for.  Below is a screenshot of where the information you provide on the Retrieve Rooms API is utilized.
+insert content here
 
 Please ONLY return a list of 'Active' Room Code & Rate Code combinations in your Retrieved Rooms API.
 
 ### HTTP Request
 
-`POST https://api.switch.cm/api/room/fetch`
+`POST https://api.dev-bookingsuite.cm/api/room/fetch`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25"
-}' 'https://api.switch.cm/api/room/fetch'
+}' 'https://api.dev-bookingsuite.cm/api/room/fetch'
 ```
 
 > JSON RESPONSE:
@@ -158,11 +160,11 @@ property_id | The ID of the property | *
 
 ## Create Rooms API
 
-The Create Rooms API will allow you to generate new rooms on your xxx.switch.cm calendar.
+The Create Rooms API will allow you to generate new rooms on your PMS calendar.
 
 ### HTTP Request
 
-`POST https://api.switch.cm/api/room/create`
+`POST https://api.dev-bookingsuite.cm/api/room/create`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -213,10 +215,11 @@ Retrieve a list of reservations for a property.
 
 ### HTTP Request
 
-`POST https://api.switch.cm/api/reservation`
+`POST https://api.dev-bookingsuite.cm/api/reservation`
 
 ```shell
-curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
+curl -k  -L -X POST -H 'X-
+-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25"
 }' 'https://api.switch.cm/api/reservation'
 ```
@@ -304,7 +307,7 @@ Sending a Create Reservation API call will generate a new reservation on the SWI
 `POST https://api.switch.cm/api/reservation/create`
 
 ```shell
-curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
+curl -k  -L -X POST -H 'X--Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25",
   "reservations": [
       {
@@ -369,7 +372,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
         ]
       }
     ]
-}' 'https://api.switch.cm/api/reservation/create'
+}' 'https://api.dev-bookingsuite.cm/api/reservation/create'
 ```
 
 
@@ -386,13 +389,11 @@ name | name of the room  | *
 
 ## Modify Reservation API
 
-SWITCH.CM uses the Modify Reservation API to modify existing reservations.
-
-Sending a Modify Reservation API call will edit an existing reservation on the SWITCH.CM calendar.
+insert content
 
 ### HTTP Request
 
-`POST https://api.switch.cm/api/reservation/modify`
+`POST https://api.dev-bookingsuite.cm/api/reservation/modify`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -460,7 +461,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
         ]
       }
     ]
-}' 'https://api.switch.cm/api/reservation/modify'
+}' 'https://api.dev-bookingsuite.cm/api/reservation/modify'
 ```
 
 
@@ -476,18 +477,18 @@ name | name of the room  | *
 
 ## Delete Reservation API
 
-SWITCH.CM uses the Delete Reservation API to delete existing reservations.
+insert content
 
 
 ### HTTP Request
 
-`POST https://api.switch.cm/api/reservation/delete`
+`POST https://api.dev-bookingsuite.cm/api/reservation/delete`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25",
   "booking_id": "9871"
-}' 'https://api.switch.cm/api/reservation/delete'
+}' 'https://api.dev-bookingsuite.cm/api/reservation/delete'
 ```
 
 
