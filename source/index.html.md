@@ -1,5 +1,5 @@
 ---
-title: Booking Suite Developer's Platform
+title: Booking Suite Developer Platform
 
 language_tabs:
   - curl
@@ -14,9 +14,19 @@ includes:
 search: true
 ---
 
-# What is the Booking Suite Developer's Platform?
+# Booking Suite Developer Platform
 
-lipsum lorem
+## What is the Booking Suite Developer's Platform
+
+content here
+
+## Why the Booking Suite Developer Platform
+
+content here
+
+## Who uses the Booking Suite Developer Platform
+
+content here
 
 - pricing & availability data
 - guest reservation data
