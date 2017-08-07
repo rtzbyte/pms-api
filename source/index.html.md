@@ -1,5 +1,5 @@
 ---
-title: Booking.com Developer Platform
+title: Booking Suite Developer Platform
 
 language_tabs:
   - curl
@@ -14,10 +14,10 @@ includes:
 search: true
 ---
 
-# The Developer Platform
+# The Platform
 
 ## What is the platform?
-under construction
+The Developer's Platform is a collection of experimental API's released by the NPD team in Booking Suite.
 ## Why the platform?
 under construction
 ## Who uses the platform?
