@@ -17,22 +17,17 @@ search: true
 # The Platform
 
 ## What is the platform?
-The Developer's Platform is a collection of experimental API's released by the NPD team in Booking Suite.
-## Why the platform?
-under construction
-## Who uses the platform?
-under construction
+The Developer's Platform is a collection of experimental API's specifically for technology vendors.
+
+Under construction
+- why the platform?
+- who uses the platform?
 # Test Environment
+To start, you'll be given access to the following sandboxes:
 
-To start, you'll have the following development environments:
-
-## Test PMS
 - a test pms (to simulate a real property)
-## Test Booking.com Account
 - a test booking.com account (to simulate inventory on an OTA)
-## Test MySQL account
 - a test MySQL database (to view raw data in real-time)
-## Authentication Keys
 - authentication keys to a sandbox
 
 > To authorize, use this code:
@@ -46,7 +41,11 @@ curl "api_endpoint_here"
 > Make sure to replace `yourtokengoeshere` with your API key.
 
 # Inventory API's
-The inventory API's allow you to synchronize inventory data with Booking.com
+The first step is making sure your hotel application is able to synchronize inventory data with Booking.com.
+
+This is the most important part, as it is crucial that your application reads the room level data correctly.
+
+Hotels have physical rooms (the actual layout of their rooms) and many layers of virtual rooms (dynamic rooms & rate plans) that affect the way their inventory is displayed online across many different sites.
 
 ## Physical Rooms
 insert content here
