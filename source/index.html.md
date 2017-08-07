@@ -14,7 +14,7 @@ includes:
 search: true
 ---
 
-# Booking.com Developer Platform
+# The Developer Platform
 
 ## What is the platform?
 under construction
