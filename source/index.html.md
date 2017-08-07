@@ -19,6 +19,8 @@ search: true
 ## What is the platform?
 In the early 1800s, the American railroad was a free-for-all.  Each region had its own way of building tracks (there were no set standards) and its own way of calculating time zones (there were over 300 across the country).
 
+![image of railroad](http://railroad.lindahall.org/siteart/essays/ramsey.jpg)
+
 At a time when trains were a popular method of transportation, this posed an imminent problem. The only solution was to instate standards, creating an industry standard for all American railroads. As a result, railroads connected the whole world, helping spark the industrial revolution.
 
 **For an ecosystem to communicate, there needs to be a common vocabulary.**
