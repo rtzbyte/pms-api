@@ -17,7 +17,15 @@ search: true
 # The Platform
 
 ## What is the platform?
-The Developer's Platform is a collection of experimental API's specifically for technology vendors.
+In the early 1800s, the American railroad was a free-for-all.  Each region had its own way of building tracks (there were no set standards) and its own way of calculating time zones (there were over 300 across the country).
+
+At a time when trains were a popular method of transportation, this posed an imminent problem. The only solution was to instate standards, creating an industry standard for all American railroads. As a result, railroads connected the whole world, helping spark the industrial revolution.
+
+**For an ecosystem to communicate, there needs to be a common vocabulary.**
+
+In the hotel technology industry, the API landscape is facing a similar issue.  Thousands of technlogy vendors and millinos of hotels around the world have difficulty connecting to each other and communicating in this common vocabulary.  Great code is crucial for modern businesses, and the best way for us to connect and share data is through APIs. 
+
+**Our goal is to make it easy for hotels & technology to connect to each other.**
 
 Under construction
 - why the platform?
