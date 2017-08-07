@@ -494,3 +494,6 @@ Parameter | Description | Mandatory
 --------- | ----------- | ---------
 property_id | The ID of the property | *
 booking_id | Booking ID  | *
+
+# Distribution API's
+This section covers the section of the developer platform that covers topics of distribution like channel managers & GDS.
