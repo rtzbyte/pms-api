@@ -497,3 +497,6 @@ booking_id | Booking ID  | *
 
 # Distribution API's
 This section covers the section of the developer platform that covers topics of distribution like channel managers & GDS.
+## Rates & Availability
+## Distribution Mapping
+# Content API's
