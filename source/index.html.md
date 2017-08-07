@@ -17,20 +17,11 @@ search: true
 # Booking.com Developer Platform
 
 ## What is the platform?
-
-content here
-
+under construction
 ## Why the platform?
-
-content here
-
+under construction
 ## Who uses the platform?
-
-content here
-
-- pricing & availability data
-- guest reservation data
-
+under construction
 # Test Environment
 
 To start, you'll have the following development environments:
@@ -50,10 +41,10 @@ curl "api_endpoint_here"
 
 > Make sure to replace `yourtokengoeshere` with your API key.
 
-# API's
+# Inventory API's
+The inventory API's allow you to synchronize inventory data with Booking.com
 
-## Retrieve Rooms API
-
+## Physical Rooms
 insert content here
 
 ### What are the Retrieved Rooms API use for?
@@ -158,9 +149,9 @@ property_id | The ID of the property | *
 
 
 
-## Create Rooms API
+## Virtual Rooms
 
-The Create Rooms API will allow you to generate new rooms on your PMS calendar.
+There are two types of virtual rooms: dynamic & rate plans.
 
 ### HTTP Request
 
