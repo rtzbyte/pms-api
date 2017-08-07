@@ -26,9 +26,13 @@ under construction
 
 To start, you'll have the following development environments:
 
+## Test PMS
 - a test pms (to simulate a real property)
+## Test Booking.com Account
 - a test booking.com account (to simulate inventory on an OTA)
+## Test MySQL account
 - a test MySQL database (to view raw data in real-time)
+## Authentication Keys
 - authentication keys to a sandbox
 
 > To authorize, use this code:
