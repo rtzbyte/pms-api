@@ -202,6 +202,7 @@ property_id | The ID of the property | *
 rooms | Multiple rooms  | *
 name | name of the room  | *
 
+# Reservation API's
 
 ## Retrieve Reservation API
 
