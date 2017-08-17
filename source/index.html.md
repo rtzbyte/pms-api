@@ -55,106 +55,63 @@ curl "api_endpoint_here"
 > Make sure to replace `yourtokengoeshere` with your API key.
 
 # Inventory API's
-The first step is making sure your hotel application is able to synchronize inventory data with Booking.com.
+There are three basic layers of hotel inventory:
 
-This is the most important part, as it is crucial that your application reads the room level data correctly.
+**Base Rooms**
+The base rooms represents the physical rooms that are inside a hotel, along with the names that a hotel gives those rooms (such as "Room 101" or "Penthouse B").  
 
-Hotels have physical rooms (the actual layout of their rooms) and many layers of virtual rooms (dynamic rooms & rate plans) that affect the way their inventory is displayed online across many different sites.
+- Dynamic Rooms
+- Rate Plans
 
-## Physical Rooms
-insert content here
+## Room Types
 
-### What are the Retrieved Rooms API use for?
+The Room Type represents the different types of **physical** rooms that are inside a hotel, such as:
 
-insert content here
+- Master Suite
+- Double Room
 
-Please ONLY return a list of 'Active' Room Code & Rate Code combinations in your Retrieved Rooms API.
+Things that do **not** qualify as a room type include:
+
+- Rate Plan derivatives (such as "Master Suite non-refundable" or "Master Suite flexible cancellation")
+- Meal Plan derivatives (such as "Double Room breakfast included" or "Double Room no breakfast")
+- Dynamic Rooms (more on that later)
+- OTA-specific rates (such as "Master Suite, Booking.com price")
+- GDS codes (such as "Double Room corporate rate")
 
 ### HTTP Request
 
-`POST https://api.dev-bookingsuite.cm/api/room/fetch`
+`/roomtypes/list/v1?hotelId=2527055&auth_token=<token>`
 
 ```shell
-curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
+curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25"
-}' 'https://api.dev-bookingsuite.cm/api/room/fetch'
+}' 'https://api.dev-bookingsuite.cm/roomtypes/list/v1?hotelId=2527055&auth_token=<token>'
 ```
 
 > JSON RESPONSE:
 
 ```json
-{
-  "rooms": [
+[
     {
-      "name": "Master Suite",
-      "id": "4",
-      "room_type": "base",
-      "base_price": "45.00",
-      "labels": [
-        {
-          "id": "57",
-          "name": "A"
-        },
-        {
-          "id": "58",
-          "name": "B"
-        },
-        {
-          "id": "59",
-          "name": "C"
-        },
-        {
-          "id": "60",
-          "name": "D"
-        },
-        {
-          "id": "61",
-          "name": "E"
-        }
-      ]
+        "roomType": "Suite",
+        "roomCount": "1",
+        "roomTypeId": "5",
+        "occupancy": "10",
+        "name": "Real King Suite",
+        "id": "252705501",
+        "standardName": "Superior King Suite"
     },
     {
-      "name": "Mixed Dorm",
-      "id": "5",
-      "room_type": "base",
-      "base_price": "20.00",
-      "labels": [
-        {
-          "id": "62",
-          "name": "A-1"
-        },
-        {
-          "id": "63",
-          "name": "A-2"
-        },
-        {
-          "id": "64",
-          "name": "A-3"
-        },
-        {
-          "id": "65",
-          "name": "A-4"
-        },
-        {
-          "id": "66",
-          "name": "B-1"
-        },
-        {
-          "id": "67",
-          "name": "B-2"
-        },
-        {
-          "id": "68",
-          "name": "B-3"
-        },
-        {
-          "id": "69",
-          "name": "B-4"
-        }
-      ]
+        "name": "Peasants Room",
+        "occupancy": "1",
+        "standardName": "Single Room",
+        "id": "252705502",
+        "roomCount": "11",
+        "roomType": "Single",
+        "roomTypeId": "10"
     }
-  ]
-}
+]
+
 ```
 
 
