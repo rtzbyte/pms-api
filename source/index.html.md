@@ -37,9 +37,6 @@ The property management system (PMS) will allow you to simulate a real property 
 **Test Booking.com Account** 
 The test Booking.com account will allow you to simulate inventory on an OTA and make live reservations for a test property.
 
-**Test MySQL Database**
-You'll be given read-only access to a MySQL sandbox so you can see how the data updates with each API call during your test interactions.
-
 **Authentication Keys**
 You will be given a set of API keys to access the sandbox of the Booking Suite Developer Platform.
 
