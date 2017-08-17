@@ -26,20 +26,26 @@ For hotels, they lack an independent marketplace to understand products as well 
 
 The Booking Suite developer platform is here to give the technology ecosystem a standard template to store data & a common language to share data.  Our goal is to make it easy for hotels & technology to connect to each other.
 
-**We build the platform.  You build the products.**
 
 # Test Environments
 To start, you'll be given access to the following sandboxes:
 
-**Test PMS**
+- **Test PMS**
 The property management system (PMS) will allow you to simulate a real property and the actions that a traditional hotel would do.
 
-**Test Booking.com Account** 
+- **Test Booking.com Account** 
 The test Booking.com account will allow you to simulate inventory on an OTA and make live reservations for a test property.
 
-**Authentication Keys**
+- **Authentication Keys**
 You will be given a set of API keys to access the sandbox of the Booking Suite Developer Platform.
 
+**We've taken down the barriers.**
+
+No commercial agreements to sign, no waiting for us to send you documents to read over.  Start coding immediately and chat with other developers in our public Slack forum.  
+
+When you're ready & you think you have a product that's ready to go live, reach out to us.  Good luck!
+
+**We've provided the platform.  You build the products.**
 
 > To authorize, use this code:
 
@@ -54,11 +60,16 @@ curl "api_endpoint_here"
 # Inventory API's
 There are three basic layers of hotel inventory:
 
-**Base Rooms**
+- **Base Rooms**
 The base rooms represents the physical rooms that are inside a hotel, along with the names that a hotel gives those rooms (such as "Room 101" or "Penthouse B").  
 
-- Dynamic Rooms
-- Rate Plans
+- **Dynamic Rooms**
+A dynamic room is a virtual room that has a parent/child relationship with an physical room.  Examples include:
+
+- a 2-bedroom villa can sell their rooms as individual rooms or the entire villa.  The entire villa option is a dynamic room & is unbookable the moment a single individual room is occupied.
+- a hostel room with 4 dorm beds can be sold as individual shared dorm beds or the entire room.  The entire room option is a dynamic room & is unbookable if a single dorm bed is occupied.
+
+- **Rate Plans**
 
 ## Room Types
 
@@ -69,11 +80,11 @@ The Room Type represents the different types of **physical** rooms that are insi
 
 Things that do **not** qualify as a room type include:
 
-- Rate Plan derivatives (such as "Master Suite non-refundable" or "Master Suite flexible cancellation")
-- Meal Plan derivatives (such as "Double Room breakfast included" or "Double Room no breakfast")
-- Dynamic Rooms (more on that later)
-- OTA-specific rates (such as "Master Suite, Booking.com price")
-- GDS codes (such as "Double Room corporate rate")
+- **Rate Plan derivatives** such as "Master Suite non-refundable" or "Master Suite flexible cancellation"
+- **Meal Plan derivatives** such as "Double Room breakfast included" or "Double Room no breakfast"
+- **Dynamic Rooms** (more on that later)
+- **OTA-specific rates** (such as "Master Suite, Booking.com price")
+- **GDS codes** (such as "Double Room corporate rate")
 
 ### HTTP Request
 
@@ -116,8 +127,13 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 
 Parameter | Description | Mandatory
 --------- | ----------- | ---------
-property_id | The ID of the property | *
-
+roomType | The name of the room type | *
+roomCount | The number of these room types | *
+RoomTypeID | a unique value for the room type | *
+occupancy | how many people can this room sleep | *
+name | a label for this room | *
+id | an ID for the specific room | *
+standardName | a name for the room | *
 
 
 ## Virtual Rooms
