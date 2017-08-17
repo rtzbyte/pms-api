@@ -14,24 +14,20 @@ includes:
 search: true
 ---
 
-# The Platform
+# Developer Platform
 
-## What is the platform?
-In the early 1800s, the American railroad was a free-for-all.  Each region had its own way of building tracks (there were no set standards) and its own way of calculating time zones (there were over 300 across the country).
+## For an ecosystem to communicate, there needs to be a common language.**
 
-![image of railroad](http://railroad.lindahall.org/siteart/essays/ramsey.jpg)
+The hotel technology industry faces pain points from all sides.
 
-At a time when trains were a popular method of transportation, this posed an imminent problem. The only solution was to instate standards, creating an industry standard for all American railroads. As a result, railroads connected the whole world, helping spark the industrial revolution.
+For technology vendors, the lack of direct access to hotels is driving up the cost of customer acquisition beyond.
 
-**For an ecosystem to communicate, there needs to be a common vocabulary.**
+For hotels, they lack an independent marketplace to understand products as well as an easy way of migrating their data once they want to deploy applications.
 
-In the hotel technology industry, the API landscape is facing a similar issue.  Thousands of technlogy vendors and millinos of hotels around the world have difficulty connecting to each other and communicating in this common vocabulary.  Great code is crucial for modern businesses, and the best way for us to connect and share data is through APIs. 
+The Booking Suite developer platform aims to give the technology ecosystem a standard template to store data & a common language to share data.
 
 **Our goal is to make it easy for hotels & technology to connect to each other.**
 
-Under construction
-- why the platform?
-- who uses the platform?
 # Test Environment
 To start, you'll be given access to the following sandboxes:
 
