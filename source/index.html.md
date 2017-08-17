@@ -16,7 +16,7 @@ search: true
 
 # Developer Platform
 
-## For an ecosystem to communicate, there needs to be a common language.
+**For an ecosystem to communicate, there needs to be a common language.**
 
 The hotel technology industry faces pain points from all sides.
 
