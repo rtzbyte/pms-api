@@ -20,13 +20,13 @@ search: true
 
 The hotel technology industry faces pain points from all sides.
 
-For technology vendors, the lack of direct access to hotels is driving up the cost of customer acquisition beyond.
+For technology vendors, the lack of direct access to hotels is driving up the cost of customer acquisition, and forcing them to allocate resources towards sales & marketing instead of innovation. 
 
 For hotels, they lack an independent marketplace to understand products as well as an easy way of migrating their data once they want to deploy applications.
 
-The Booking Suite developer platform aims to give the technology ecosystem a standard template to store data & a common language to share data.
+The Booking Suite developer platform is here to give the technology ecosystem a standard template to store data & a common language to share data.  Our goal is to make it easy for hotels & technology to connect to each other.
 
-**Our goal is to make it easy for hotels & technology to connect to each other.**
+**We build the platform.  You build the products.**
 
 # Test Environments
 To start, you'll be given access to the following sandboxes:
