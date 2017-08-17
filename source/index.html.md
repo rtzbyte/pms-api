@@ -71,7 +71,7 @@ A dynamic room is a virtual room that has a parent/child relationship with an ph
 
 - **Rate Plans**
 
-## Room Types
+## Room Types (full list)
 
 The Room Type represents the different types of **physical** rooms that are inside a hotel, such as:
 
@@ -122,7 +122,6 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 
 ```
 
-
 ### Parameters
 
 Parameter | Description | Mandatory
@@ -135,10 +134,56 @@ name | a label for this room | *
 id | an ID for the specific room | *
 standardName | a name for the room | *
 
+## Room Types (partial)
 
-## Virtual Rooms
+You can also call specific details about individual room details with a different url endpoint.
 
-There are two types of virtual rooms: dynamic & rate plans.
+`/roomtypes/get/v1?id=252705502&hotelId=2527055&auth_token=<token>`
+
+Which will return the information on a single room
+
+```
+{
+    "roomCount": "11",
+    "roomType": "Single",
+    "roomTypeId": "10",
+    "name": "Peasants Room",
+    "occupancy": "1",
+    "standardName": "Single Room",
+    "id": "252705502"
+}
+
+```
+
+## Room Names
+
+The Room Names API call pulls a list of all of the names of that specific room type.
+
+`/rooms/list/v1?roomTypeId=252705502&hotelId=2527055&auth_token=<token>`
+
+Parameter | Description | Mandatory
+--------- | ----------- | ---------
+roomType | The name of the room type | *
+roomCount | The number of these room types | *
+RoomTypeID | a unique value for the room type | *
+occupancy | how many people can this room sleep | *
+name | a label for this room | *
+id | an ID for the specific room | *
+standardName | a name for the room | *
+
+> JSON RESPONSE:
+
+```
+[
+    {
+        "hotelId": "2527055",
+        "roomTypeId": "252705501",
+        "id": "481",
+        "name": "1"
+    }
+]
+
+```
 
 ### HTTP Request
 
