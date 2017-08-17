@@ -16,7 +16,7 @@ search: true
 
 # Developer Platform
 
-## For an ecosystem to communicate, there needs to be a common language.**
+## For an ecosystem to communicate, there needs to be a common language.
 
 The hotel technology industry faces pain points from all sides.
 
@@ -28,20 +28,28 @@ The Booking Suite developer platform aims to give the technology ecosystem a sta
 
 **Our goal is to make it easy for hotels & technology to connect to each other.**
 
-# Test Environment
+# Test Environments
 To start, you'll be given access to the following sandboxes:
 
-- a test pms (to simulate a real property)
-- a test booking.com account (to simulate inventory on an OTA)
-- a test MySQL database (to view raw data in real-time)
-- authentication keys to a sandbox
+**Test PMS**
+The property management system (PMS) will allow you to simulate a real property and the actions that a traditional hotel would do.
+
+**Test Booking.com Account** 
+The test Booking.com account will allow you to simulate inventory on an OTA and make live reservations for a test property.
+
+**Test MySQL Database**
+You'll be given read-only access to a MySQL sandbox so you can see how the data updates with each API call during your test interactions.
+
+**Authentication Keys**
+You will be given a set of API keys to access the sandbox of the Booking Suite Developer Platform.
+
 
 > To authorize, use this code:
 
 ```curl
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "X-Switch-Token: yourtokengoeshere"
+  -H "X-BKS-Token: yourtokengoeshere"
 ```
 
 > Make sure to replace `yourtokengoeshere` with your API key.
