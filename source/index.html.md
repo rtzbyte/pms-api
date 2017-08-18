@@ -260,11 +260,92 @@ name | name of the room  | *
 
 ## Dynamic List API (full list)
 
-under construction
+The dynamic room creates a parent/child physical room.
+
+The API specifies the rooms on the child level.  
+
+`/dynamicrooms/list/v1?hotelId=2527055&auth_token=<token>`
+
+```
+{
+  "id": "101",
+  "name": "Example of a Dynamic Room",
+  "type": "dynamic",
+  "rooms": [
+    {
+      "id": "700"
+      "name": "Dynamic Room A (first dynamic room)",
+      "child": "300", "301"
+    }
+    {
+      "id": 701"
+      "name": "Second Dynamic Room"
+      "child": "302", "303"
+    }
+  ]
+}
+```
 
 ## Rate Plans List API (full list)
 
-under construction
+There are four types of rate plans that you can attach to a rate plan.  The child relationship helps specify the availability of the rate plan since the availability will always match the child room's availability.
+
+### Parameters
+
+Parameter | Description | End-User
+--------- | ----------- | ---------
+GDS | for distribution related to business travel | GDS, business travelers, enterprise travel managers
+OTA | rate plans specific to an OTA  | OTA, metasearch
+auxiliary | rate plan with ancilliary revenue attached to it  | (n/a)
+occupancy-based | different price based on number of guests | (n/a)
+
+`/rateplans/list/v1?hotelId=2527055&auth_token=<token>`
+
+```
+[
+  {
+    "id": "101",
+    "name": "Double Room (GDS public)", -- this wholesale rate is specifically for the GDS
+    "type": "gds",
+    "child": "201" -- points to the physical room type
+  }
+  {
+    "id": "102",
+    "name": "Double Room (GDS ABN Amro)", -- this GDS rate is specifically for employees of ABN Amro
+    "type": "gds",
+    "child": "202"
+  }
+  {
+    "id": "103",
+    "name": "Double Room (with breakfast)",
+    "type": "auxiliary"
+    "child": "203" -- points to the original physical room type
+    "auxiliary": "301" -- mapped to the auxiliary item (in this case, 301 is breakfast)
+  }
+  {
+    "id": "104"
+    "name": "Double Room (AirBNB price)",
+    "type": "ota"
+    "child": "204" -- double-check if we need to attach specific ID of OTA, or if that's for distribution API
+  }
+  {
+    "id": "105"
+    "name": "Double Room with breakfast, Expedia price",
+    "type": "ota"
+    "type": "auxiliary" -- notice this room has two tags (ota & auxiliary)
+    "child": "205"
+    "auxiliary": "301" -- breakfast tag
+  }
+  {
+    "id": "106"
+    "name": "Double Room, single occupancy"
+    "type": "occupancy"
+    "child": "206"
+    "occupancy": "1" -- specify's the number of poeple
+]
+  
+
+```
 
 # Reservation API's
 
