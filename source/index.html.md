@@ -39,13 +39,11 @@ The test Booking.com account will allow you to simulate inventory on an OTA and 
 - **Authentication Keys**
 You will be given a set of API keys to access the sandbox of the Booking Suite Developer Platform.
 
-**We've taken down the barriers.**
-
 No commercial agreements to sign, no waiting for us to send you documents to read over.  Start coding immediately and chat with other developers in our public Slack forum.  
 
 When you're ready & you think you have a product that's ready to go live, reach out to us.  Good luck!
 
-**We've provided the platform.  You build the products.**
+**We've taken down the barriers.  We've provided the platform.  You build the products.**
 
 > To authorize, use this code:
 
