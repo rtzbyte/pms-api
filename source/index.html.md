@@ -81,7 +81,7 @@ A rate plan takes a base room or a dynamic room & changes the price.  Examples i
 - taking a base room (Master Suite) and giving it a specific price on an OTA ("Master Suite Booking.com price")
 - taking a dynamic room (Whole Villa) and giving it an auxiliary-specific price ("Whole Villa breakfast included")
 
-## Room Types (full list)
+## Room Types API (full list)
 
 The Room Type represents the different types of **physical** rooms that are inside a hotel, such as:
 
@@ -144,7 +144,7 @@ name | a label for this room | *
 id | an ID for the specific room | *
 standardName | a name for the room | *
 
-## Room Types (partial)
+## Room Types API (partial)
 
 You can also call specific details about individual room details with a different url endpoint.
 
@@ -165,7 +165,7 @@ Which will return the information on a single room
 
 ```
 
-## Room Names
+## Room Names API
 
 The Room Names API call pulls a list of all of the names of that specific room type.
 
@@ -246,6 +246,7 @@ name | name of the room  | *
 
 Retrieve a list of reservations for a property.
 
+'/reservations/get/v1?id=6719&hotelId=2527055&auth_token=<token>'
 
 ### HTTP Request
 
@@ -262,59 +263,13 @@ curl -k  -L -X POST -H 'X-
 
 ```json
 {
-  "reservations": [
-        {
-          "booking_id": "101657667746",
-          "booking_date": "2017-02-17",
-          "organiser_name": "John Doe",
-          "rooms": [
-            {
-              "id": "4567",
-              "booking_date": "2017-02-17",
-              "check_out": "2016-11-28",
-              "status": "waiting for guest",
-              "source": "5",
-              "booked_room": "5120",
-              "deleted_at": null,
-              "created_at": "2017-02-14 11:18:20",
-              "updated_at": "2017-02-14 11:18:20",
-              "total": "225000.00",
-              "deposit": "0.00",
-              "total_payment": null,
-              "cleaning_fee": "0.00",
-              "commission": "33750.00",
-              "service_fee": "0.00",
-              "gross_revenue": "225000.00",
-              "net_revenue": "191250.00",
-              "remaining_balance": "225000.00",
-              "auxiliaries": null,
-              "sales_tax": "0.00",
-              "tax_rate": "0.00",
-              "guest": {
-                "name": "John Doe",
-                "email": "476115+bulk@switch.cm",
-                "phone": "6478219711",
-                "address": "90 queens drive",
-                "city": "Toronto",
-                "zip": "M6l3e2"
-              },
-              "nights": [
-                {
-                  "date": "2017-02-17",
-                  "price": "149.00",
-                  "assigned_room": "57"
-                },
-                {
-                  "date": "2017-02-18",
-                  "price": "275.00",
-                  "assigned_room": "57"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+    "id": "6719",
+    "roomReservations": [
+        "7738"
+    ],
+    "status": "OPEN"
 }
+
 ```
 
 
@@ -330,83 +285,23 @@ end | filter result date to (yyyy-mm-dd) |
 
 The search parameters will return all reservations with any days inside the date parameters.  For example, a search for April 3rd to April 5th will yield a reservation from April 1st to April 7th (even though the check-in & check-out dates fall outside of the search parameter dates).
 
-## Create Reservation API
+## Room Reservations API
 
-SWITCH.CM uses the Create Reservation API to receive reservations.
-
-Sending a Create Reservation API call will generate a new reservation on the SWITCH.CM calendar.
+'/roomreservations/get/v1?id=7738&hotelId=2527055&auth_token=<token>'
 
 ### HTTP Request
 
 `POST https://api.switch.cm/api/reservation/create`
 
 ```shell
-curl -k  -L -X POST -H 'X--Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
-  "property_id": "25",
-  "reservations": [
-      {
-        "booking_id": "101657667746",
-        "booking_date": "2017-02-17",
-        "organiser_name": "John Doe",
-        "rooms": [
-          {
-            "booked_room": "4",
-            "status": "waiting for guest",
-            "check_in": "2017-02-17",
-            "check_out": "2017-02-19",
-            "guest": {
-              "name": "John Doe",
-              "email": "476115+bulk@switch.cm",
-              "phone": "6478219711",
-              "address": "90 queens drive",
-              "city": "Toronto",
-              "zip": "M6l3e2"
-            },
-            "nights": [
-              {
-                "date": "2017-02-17",
-                "price": "149.00",
-                "assigned_room": "57"
-              },
-              {
-                "date": "2017-02-18",
-                "price": "275.00",
-                "assigned_room": "57"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "booking_id": "101657667747",
-        "booking_date": "2017-02-17",
-        "organiser_name": "John Doe2",
-        "rooms": [
-          {
-            "booked_room": "4",
-            "status": "waiting for guest",
-            "check_in": "2017-02-19",
-            "check_out": "2017-02-20",
-            "guest": {
-              "name": "John Doe2",
-              "email": "476115+bulk@switch.cm",
-              "phone": "6478219711",
-              "address": "100 queens drive",
-              "city": "Toronto",
-              "zip": "M6l3e2"
-            },
-            "nights": [
-              {
-                "date": "2017-02-19",
-                "price": "149.00",
-                "assigned_room": "58"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-}' 'https://api.dev-bookingsuite.cm/api/reservation/create'
+{
+    "roomId": "481",
+    "roomTypeId": "252705501",
+    "status": "OPEN",
+    "id": "7738",
+    "reservationId": "6719"
+}
+
 ```
 
 
@@ -525,6 +420,18 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
 }' 'https://api.dev-bookingsuite.cm/api/reservation/delete'
 ```
 
+## Notes API
+
+`/notes/list/v1?reservationId=6719&hotelId=2527055&auth_token=<token>`
+
+```shell
+[
+    {
+        "origin": "internal",
+        "content": "This is an internal comment"
+    }
+]
+```
 
 
 ### Parameters
