@@ -258,7 +258,7 @@ property_id | The ID of the property | *
 rooms | Multiple rooms  | *
 name | name of the room  | *
 
-## Dynamic List API (full list)
+## Dynamic Rooms API 
 
 The dynamic room creates a parent/child physical room.
 
@@ -286,7 +286,7 @@ The API specifies the rooms on the child level.
 }
 ```
 
-## Rate Plans List API (full list)
+## Rate Plans API 
 
 There are four types of rate plans that you can attach to a rate plan.  The child relationship helps specify the availability of the rate plan since the availability will always match the child room's availability.
 
@@ -343,8 +343,6 @@ occupancy-based | different price based on number of guests | (n/a)
     "child": "206"
     "occupancy": "1" -- specify's the number of poeple
 ]
-  
-
 ```
 
 # Reservation API's
