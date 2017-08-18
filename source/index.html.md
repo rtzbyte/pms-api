@@ -116,22 +116,22 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 ```json
 [
     {
-        "roomType": "Suite",
-        "roomCount": "2",
-        "roomTypeId": "5",
-        "occupancy": "10",
         "name": "Real King Suite",
         "id": "252705501",
+        "roomType": "Suite",
         "standardName": "Superior King Suite"
+        "roomTypeId": "5",
+        "roomCount": "2",
+        "occupancy": "10",
     },
     {
+        "name": "Peasants Room",
+        "id": "252705502",
         "roomType": "Single",
+        "standardName": "Single Room",
         "roomTypeId": "10"
         "roomCount": "11",
         "occupancy": "1",
-        "name": "Peasants Room",
-        "id": "252705502",
-        "standardName": "Single Room",
     }
 ]
 
@@ -141,13 +141,15 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 
 Parameter | Description | Mandatory
 --------- | ----------- | ---------
-roomType | The standardized name of the room type | *
-roomCount | The number of these room types | *
-RoomTypeID | a unique value for the room type | *
-occupancy | how many people can this room sleep | *
-name | a label for this room | *
+name | a label for the roomType created by the property | *
 id | an ID for the specific room | *
-standardName | a name for the room | *
+roomType | The internal standardized Booking.com name of the room type | *
+standardName | the internal Booking.com label of the room type | *
+RoomTypeID | the internal Booking.com ID of the room type | *
+roomCount | The total number of these room types that exist | *
+occupancy | how many people can this room sleep | *
+
+Note that if the property has occupancy-based pricing (charging different rates based on the number of people), those occupancy-based rates will be a separate **rate plan**, not a physical room.
 
 The roomType is a standard internal Booking ID.  We've provided an open-sourced library that matches internal Booking roomType names with other OTA's below, making it easy to connect and distribute inventory.
 
@@ -155,10 +157,10 @@ As your properties expand their distribution, this library should (in theory) ma
 
 ### RoomType standards
 
-roomType | roomTypeID | Expedia
---------- | ----------- | ---------
-Suite | 2 | exp_suite
-Single Room | 10 | exp_single
+roomType | roomTypeID | Expedia | AirBNB
+--------- | ----------- | --------- | ---------
+Suite | 2 | exp_suite | airbnb_suite
+Single Room | 10 | exp_single | airbnb_single
 
 ## Room Types API (partial)
 
