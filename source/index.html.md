@@ -2,7 +2,10 @@
 title: Booking Suite Developer Platform
 
 language_tabs:
-  - curl
+  - read
+  - create
+  - modify
+  - delete
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
