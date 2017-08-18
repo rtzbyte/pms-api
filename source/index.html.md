@@ -84,14 +84,16 @@ A rate plan takes a base room or a dynamic room & changes the price.  Examples i
 - taking a base room (Master Suite) and giving it a specific price on an OTA ("Master Suite Booking.com price")
 - taking a dynamic room (Whole Villa) and giving it an auxiliary-specific price ("Whole Villa breakfast included")
 
-## Room Types API (full list)
+## Room Types List API (full list)
 
-The Room Type represents the different types of **physical** rooms that are inside a hotel, such as:
+The Room Types List API shows the full list of a hotel's room types.
+
+Room types are the **physical** rooms that are inside a hotel, such as:
 
 - Master Suite
 - Double Room
 
-Things that do **not** qualify as a room type include:
+Things that do **not** qualify as a room type (and will not be in the Room Types List API) include:
 
 - **Rate Plan derivatives** such as "Master Suite non-refundable" or "Master Suite flexible cancellation"
 - **Meal Plan derivatives** such as "Double Room breakfast included" or "Double Room no breakfast"
@@ -115,7 +117,7 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 [
     {
         "roomType": "Suite",
-        "roomCount": "1",
+        "roomCount": "2",
         "roomTypeId": "5",
         "occupancy": "10",
         "name": "Real King Suite",
@@ -123,13 +125,13 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
         "standardName": "Superior King Suite"
     },
     {
-        "name": "Peasants Room",
-        "occupancy": "1",
-        "standardName": "Single Room",
-        "id": "252705502",
-        "roomCount": "11",
         "roomType": "Single",
         "roomTypeId": "10"
+        "roomCount": "11",
+        "occupancy": "1",
+        "name": "Peasants Room",
+        "id": "252705502",
+        "standardName": "Single Room",
     }
 ]
 
@@ -139,13 +141,22 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
 
 Parameter | Description | Mandatory
 --------- | ----------- | ---------
-roomType | The name of the room type | *
+roomType | The standardized name of the room type | *
 roomCount | The number of these room types | *
 RoomTypeID | a unique value for the room type | *
 occupancy | how many people can this room sleep | *
 name | a label for this room | *
 id | an ID for the specific room | *
 standardName | a name for the room | *
+
+The roomType is a standard internal Booking ID.  We've provided an open-sourced library that matches internal Booking roomType names with other OTA's below, making it easy to connect and distribute inventory.
+
+### RoomType standards
+
+roomType | roomTypeID | Expedia
+--------- | ----------- | ---------
+Suite | 2 | exp_suite
+Single Room | 10 | exp_single
 
 ## Room Types API (partial)
 
