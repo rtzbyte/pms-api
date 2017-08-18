@@ -56,18 +56,30 @@ curl "api_endpoint_here"
 > Make sure to replace `yourtokengoeshere` with your API key.
 
 # Inventory API's
+
+The inventory API synchronizes the physicial & virtual rooms of a property with their PMS, third-party technology applications, and the OTA's that they use.
+
+- **Physical Inventory** refers to the physical rooms inside a property & how they are laid out.
+- **Virtual Inventory** refers to the way those rooms are laid out online.  Sometimes properties choose to withhold inventory, or sometimes they'll advertise different rooms on different OTA's and at different prices.
+
+## Layers of Inventory
+
 There are three basic layers of hotel inventory:
 
-- **Base Rooms**
+**Base Rooms**
 The base rooms represents the physical rooms that are inside a hotel, along with the names that a hotel gives those rooms (such as "Room 101" or "Penthouse B").  
 
-- **Dynamic Rooms**
+**Dynamic Rooms**
 A dynamic room is a virtual room that has a parent/child relationship with an physical room.  Examples include:
 
 - a 2-bedroom villa can sell their rooms as individual rooms or the entire villa.  The entire villa option is a dynamic room & is unbookable the moment a single individual room is occupied.
 - a hostel room with 4 dorm beds can be sold as individual shared dorm beds or the entire room.  The entire room option is a dynamic room & is unbookable if a single dorm bed is occupied.
 
-- **Rate Plans**
+**Rate Plans**
+A rate plan takes a base room or a dynamic room & changes the price.  Examples include:
+
+- taking a base room (Master Suite) and giving it a specific price on an OTA ("Master Suite Booking.com price")
+- taking a dynamic room (Whole Villa) and giving it an auxiliary-specific price ("Whole Villa breakfast included")
 
 ## Room Types (full list)
 
