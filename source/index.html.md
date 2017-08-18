@@ -270,7 +270,7 @@ under construction
 
 ## Retrieve Reservation API
 
-Retrieve a list of reservations for a property.
+Retrieve a list of reservations for a property.  Note that it is possible for a reservation to have multiple roomReservations (if it is listed in multiple properties)
 
 '/reservations/get/v1?id=6719&hotelId=2527055&auth_token=<token>'
 
@@ -291,9 +291,9 @@ curl -k  -L -X POST -H 'X-
 {
     "id": "6719",
     "roomReservations": [
-        "7738"
+        "7738",
+        "7739"
     ],
-    "status": "OPEN"
 }
 
 ```
