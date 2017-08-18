@@ -84,7 +84,7 @@ A rate plan takes a base room or a dynamic room & changes the price.  Examples i
 - taking a base room (Master Suite) and giving it a specific price on an OTA ("Master Suite Booking.com price")
 - taking a dynamic room (Whole Villa) and giving it an auxiliary-specific price ("Whole Villa breakfast included")
 
-## Room Types List API (full list)
+## Physical Room Types List API (full list)
 
 The Room Types List API shows the full list of a hotel's room types.
 
@@ -162,7 +162,7 @@ roomType | roomTypeID | Expedia | AirBNB
 Suite | 2 | exp_suite | airbnb_suite
 Single Room | 10 | exp_single | airbnb_single
 
-## Room Types API (partial)
+## Physical Room Types Get API (partial)
 
 You can also call specific details about individual room details with a different url endpoint.
 
@@ -183,7 +183,7 @@ Which will return the information on a single room
 
 ```
 
-## Room Names API
+## Physical Room Names API
 
 The Room Names API call pulls a list of all of the names of that specific room type.
 
@@ -257,6 +257,14 @@ Parameter | Description | Mandatory
 property_id | The ID of the property | *
 rooms | Multiple rooms  | *
 name | name of the room  | *
+
+## Dynamic List API (full list)
+
+under construction
+
+## Rate Plans List API (full list)
+
+under construction
 
 # Reservation API's
 
