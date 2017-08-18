@@ -119,7 +119,7 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
         "name": "Real King Suite",
         "id": "252705501",
         "roomType": "Suite",
-        "standardName": "Superior King Suite"
+        "standardName": "Superior King Suite",
         "roomTypeId": "5",
         "roomCount": "2",
         "occupancy": "10",
@@ -129,7 +129,7 @@ curl -k  -L -X POST -H 'X-BKS-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type
         "id": "252705502",
         "roomType": "Single",
         "standardName": "Single Room",
-        "roomTypeId": "10"
+        "roomTypeId": "10",
         "roomCount": "11",
         "occupancy": "1",
     }
