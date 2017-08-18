@@ -151,6 +151,8 @@ standardName | a name for the room | *
 
 The roomType is a standard internal Booking ID.  We've provided an open-sourced library that matches internal Booking roomType names with other OTA's below, making it easy to connect and distribute inventory.
 
+As your properties expand their distribution, this library should (in theory) make it easier to help you automate your mapping.
+
 ### RoomType standards
 
 roomType | roomTypeID | Expedia
