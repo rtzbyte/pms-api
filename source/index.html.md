@@ -245,7 +245,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
       ]
     }
   ]
-}' 'https://api.switch.cm/api/room/create'
+}'
 ```
 
 
