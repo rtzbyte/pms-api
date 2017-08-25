@@ -553,15 +553,15 @@ The Distribution API connects an ecosystem of channel managers to the HUB, allow
 
 On the front-end, a technology vendor can connect to thousands of OTA's and then select from a list of connectivity partners who are certified partners of a particular OTA.
 
-*Advantages for Hotels*
+**Advantages for Hotels**
 
 - properties can use multiple channel managers (not just one)
 - the billing is handled automatically by Booking.com (instead of juggling multiple subscriptions)
 - you can mix-and-match any combination of PMS's and Channel Managers, even if they don't have a direct connection with each other.
 
-*Advantages for Connectivity Partners*
+**Advantages for Connectivity Partners**
 
-- easy onboarding (no data migration required)
+- easy onboarding (no data migration or re-mapping required)
 - easy billing (billing is handled by Booking.com)
 - direct exposure to millions of partners
 - lowered customer acquisition costs 
@@ -570,7 +570,7 @@ On the front-end, a technology vendor can connect to thousands of OTA's and then
 
 The first connectivity endpoints allows you to query a predefined list of OTA's & distribution sites.
 
-`/notes/connectivity/v1?auth_token=<token>`
+`/connectivity/v1?auth_token=<token>`
 
 ```
 [
@@ -581,5 +581,40 @@ The first connectivity endpoints allows you to query a predefined list of OTA's 
 ]
 ```
 
-## Distribution Mapping
+## Certified Partners
+
+The second endpoint queries a list of connectivity partners that have certifications with a specific OTA.
+
+`/connectivity/v1?auth_token=<token>`
+
+```
+[
+    {
+        "ota_id": "1",
+        "ota_name": "AirBNB"
+        "channel_manager_id": "1"
+        "channel_manager_name": "Sirvoy"
+    }
+]
+```
+
+## Settings
+
+The third endpoint stores the settings of that particular OTA.  In certain cases, if the connectivity provider is changed, this data is stored.
+
+`/connectivity/v1?auth_token=<token>`
+
+```
+[
+    {
+        "ota_id": "1",
+        "ota_name": "AirBNB"
+        "channel_manager_id": "1"
+        "channel_manager_name": "Sirvoy"
+        "ota_username": "myairbnb@email.com"
+        "ota_password": "password123"
+    }
+]
+```
+
 # Content API's
