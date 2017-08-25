@@ -547,7 +547,10 @@ property_id | The ID of the property | *
 booking_id | Booking ID  | *
 
 # Distribution API's
-This section covers the section of the developer platform that covers topics of distribution like channel managers & GDS.
+The Distribution API connects an ecosystem of channel managers to the HUB, allowing third-party technology vendors (such as a PMS) to access reservations from a wide variety of sources (like OTA's).
+
+![gif](https://media.giphy.com/media/l1J9EH625fh1uRAHK/giphy.gif)
+
 ## Rates & Availability
 ## Distribution Mapping
 # Content API's
