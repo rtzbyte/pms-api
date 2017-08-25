@@ -551,6 +551,35 @@ The Distribution API connects an ecosystem of channel managers to the HUB, allow
 
 ![gif](https://media.giphy.com/media/l1J9EH625fh1uRAHK/giphy.gif)
 
-## Rates & Availability
+On the front-end, a technology vendor can connect to thousands of OTA's and then select from a list of connectivity partners who are certified partners of a particular OTA.
+
+*Advantages for Hotels*
+
+- properties can use multiple channel managers (not just one)
+- the billing is handled automatically by Booking.com (instead of juggling multiple subscriptions)
+- you can mix-and-match any combination of PMS's and Channel Managers, even if they don't have a direct connection with each other.
+
+*Advantages for Connectivity Partners*
+
+- easy onboarding (no data migration required)
+- easy billing (billing is handled by Booking.com)
+- direct exposure to millions of partners
+- lowered customer acquisition costs 
+
+## Connectivity Endpoints
+
+The first connectivity endpoints allows you to query a predefined list of OTA's & distribution sites.
+
+`/notes/connectivity/v1?auth_token=<token>`
+
+```
+[
+    {
+        "ota_id": "1",
+        "ota_name": "AirBNB"
+    }
+]
+```
+
 ## Distribution Mapping
 # Content API's
