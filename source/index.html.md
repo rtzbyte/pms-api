@@ -40,6 +40,11 @@ During this connectivity summit, we will be bringing PMS providers from around t
 - to discuss feedback on what features & builds are desirable for PMS providers
 - to discuss commercial strategies on how we can help PMS's scale
 
+There will be two dates:
+
+- November 1st to 3rd, 2017 (Hotel PMS providers)
+- October 30th and 31st, 2017 (Vacation Rental PMS providers)
+
 # Test Environments
 To start, you'll be given access to the following sandboxes:
 
