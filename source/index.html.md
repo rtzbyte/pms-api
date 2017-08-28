@@ -29,6 +29,16 @@ For hotels, they lack an independent marketplace to understand products as well 
 
 The Booking Suite developer platform is here to give the technology ecosystem a standard template to store data & a common language to share data.  Our goal is to make it easy for hotels & technology to connect to each other.
 
+## PMS Connectivity Summit 2017
+![gif](http://i.imgur.com/vVClXOQ.png)
+
+We cordially invite you to the first annual PMS Connectivity Summit in the Booking HQ in Amsterdam.
+
+During this connectivity summit, we will be bringing PMS providers from around the Globe:
+
+- to stress test our PMS connectivity API's
+- to discuss feedback on what features & builds are desirable for PMS providers
+- to discuss commercial strategies on how we can help PMS's scale
 
 # Test Environments
 To start, you'll be given access to the following sandboxes:
