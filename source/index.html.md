@@ -35,13 +35,13 @@ The HUB is a human-powered system where thousands of employees in the Booking.co
 
 ![test2](https://github.com/jeffpan1/pms-api/blob/master/source/images/giphy.gif)
 
-![gif](https://media.giphy.com/media/l1J9EH625fh1uRAHK/giphy.gif)
-
 Just kidding. Enter this URL into your browser:
 
 `https://hub-api.booking.com/roomreservations/list/v1?hotelId=2527055&auth_token=YtvwIJvM4Nr8ySOBlpnui6OXufdh6li4f1Qwo5L1RDpw`
 
-That's you pulling a specific reservation from hotelID from the HUB.  The URL (hub-api.booking.com) will allow you to read & write into a centralized database (with standardized data schemas) to indirectly communicate with hotel technology applications.
+That's you pulling a specific reservation from hotelID from the HUB.  
+
+The URL (hub-api.booking.com) will allow you to read & write into a centralized database (with standardized data schemas) to indirectly communicate with hotel technology applications.
 
 ## PMS Connectivity Summit 2017
 
