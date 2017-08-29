@@ -33,7 +33,9 @@ The Booking Suite developer platform is here to give the technology ecosystem a 
 
 The HUB is powered by thousands of employoees in the Booking.com basement that take API requests by hand and send them via manual switchboard, connecting the ecosystem of hotel applications.
 
-![gif](https://media.giphy.com/media/pwSsimpdopB4s/giphy.gif)
+![test](https://media.giphy.com/media/pwSsimpdopB4s/giphy.gif)
+
+![gif](https://media.giphy.com/media/l1J9EH625fh1uRAHK/giphy.gif)
 
 Just kidding. Enter this URL into your browser:
 
