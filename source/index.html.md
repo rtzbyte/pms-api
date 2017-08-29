@@ -29,6 +29,14 @@ For hotels, they lack an independent marketplace to understand products as well 
 
 The Booking Suite developer platform is here to give the technology ecosystem a standard template to store data & a common language to share data.  Our goal is to make it easy for hotels & technology to connect to each other.
 
+## What is the HUB?
+
+Quick!  Enter this URL into your browser:
+
+`https://hub-api.booking.com/roomreservations/list/v1?hotelId=2527055&auth_token=YtvwIJvM4Nr8ySOBlpnui6OXufdh6li4f1Qwo5L1RDpw`
+
+That's you pulling a specific reservation from hotelID from the HUB.  The URL (hub-api.booking.com) will allow you to read & write into a centralized database (with standardized data schemas) to indirectly communicate with an ecosystem of hotel applications.
+
 ## PMS Connectivity Summit 2017
 
 Would you be interested in attending our PMS Connectivity Summit?
