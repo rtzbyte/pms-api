@@ -51,7 +51,11 @@ During this connectivity summit, we will be bringing PMS providers from around t
 
 - to stress test our PMS connectivity API's
 - to discuss feedback on what features & builds are desirable for PMS providers
-- to discuss commercial strategies on how we can help PMS's scale
+- to discuss segments of the HUB that will help PMS's scale
+
+Come to Amsterdam with your developers on your own expense to work on an experimental API with no guarantee of commercial success.
+
+Sounds fun, right?
 
 # Test Environments
 To start, you'll be given access to the following sandboxes:
