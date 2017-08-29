@@ -31,6 +31,8 @@ The Booking Suite developer platform is here to give the technology ecosystem a 
 
 ## What is the HUB?
 
+![gif](https://media.giphy.com/media/YByNOw8zytvQk/giphy.gif)
+
 Quick!  Enter this URL into your browser:
 
 `https://hub-api.booking.com/roomreservations/list/v1?hotelId=2527055&auth_token=YtvwIJvM4Nr8ySOBlpnui6OXufdh6li4f1Qwo5L1RDpw`
