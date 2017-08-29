@@ -31,13 +31,15 @@ The Booking Suite developer platform is here to give the technology ecosystem a 
 
 ## What is the HUB?
 
+The HUB is powered by thousands of employoees in the Booking.com basement that take API requests by hand and send them via manual switchboard, connecting the ecosystem of hotel applications.
+
 ![gif](https://media.giphy.com/media/YByNOw8zytvQk/giphy.gif)
 
-Quick!  Enter this URL into your browser:
+Just kidding. Enter this URL into your browser:
 
 `https://hub-api.booking.com/roomreservations/list/v1?hotelId=2527055&auth_token=YtvwIJvM4Nr8ySOBlpnui6OXufdh6li4f1Qwo5L1RDpw`
 
-That's you pulling a specific reservation from hotelID from the HUB.  The URL (hub-api.booking.com) will allow you to read & write into a centralized database (with standardized data schemas) to indirectly communicate with an ecosystem of hotel applications.
+That's you pulling a specific reservation from hotelID from the HUB.  The URL (hub-api.booking.com) will allow you to read & write into a centralized database (with standardized data schemas) to indirectly communicate with hotel technology applications.
 
 ## PMS Connectivity Summit 2017
 
