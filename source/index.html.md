@@ -23,7 +23,7 @@ search: true
 
 The hotel technology industry faces pain points from all sides.
 
-For technology vendors, the lack of direct access to hotels is driving up the cost of customer acquisition, and forcing them to allocate resources towards sales & marketing instead of innovation. 
+For technology vendors, the lack of direct access to hotels is driving up the cost of customer acquisition, and forcing them to allocate resources towards sales & marketing instead of innovation.
 
 For hotels, they lack an independent marketplace to understand products as well as an easy way of migrating their data once they want to deploy applications.
 
@@ -51,7 +51,7 @@ To start, you'll be given access to the following sandboxes:
 - **Test PMS**
 The property management system (PMS) will allow you to simulate a real property and the actions that a traditional hotel would do.
 
-- **Test Booking.com Account** 
+- **Test Booking.com Account**
 The test Booking.com account will allow you to simulate inventory on an OTA and make live reservations for a test property.
 
 - **Authentication Keys**
@@ -164,6 +164,11 @@ RoomTypeID | the internal Booking.com ID of the room type | *
 roomCount | The total number of these room types that exist | *
 occupancy | how many people can this room sleep | *
 
+**Tancrede: I understand you expect a POST from PMS to us:**
+
+ - id is from the PMS? the room type id on their end?
+ - B.com RoomTypeID: how could they know in the first place the B.com roomTypeID? as this is a POST PMS -> B.com
+
 Note that if the property has occupancy-based pricing (charging different rates based on the number of people), those occupancy-based rates will be a separate **rate plan**, not a physical room.
 
 The roomType is a standard internal Booking ID.  We've provided an open-sourced library that matches internal Booking roomType names with other OTA's below, making it easy to connect and distribute inventory.
@@ -201,6 +206,8 @@ Which will return the information on a single room
 ## Physical Room Names API
 
 The Room Names API call pulls a list of all of the names of that specific room type.
+
+**Tancrede: I don't understand this one: PMS pulls list of (B.com) roomType? for a given hotel?**
 
 `/rooms/list/v1?roomTypeId=252705502&hotelId=2527055&auth_token=<token>`
 
@@ -273,7 +280,7 @@ property_id | The ID of the property | *
 rooms | Multiple rooms  | *
 name | name of the room  | *
 
-## Dynamic Rooms API 
+## Dynamic Rooms API
 
 The dynamic room creates a parent/child physical room.
 
@@ -301,7 +308,7 @@ The API specifies the rooms on the child level.
 }
 ```
 
-## Rate Plans API 
+## Rate Plans API
 
 There are four types of rate plans that you can attach to a rate plan.  The child relationship helps specify the availability of the rate plan since the availability will always match the child room's availability.
 
@@ -372,6 +379,8 @@ Retrieve a list of reservations for a property.  Note that it is possible for a 
 
 `POST https://api.dev-bookingsuite.cm/api/reservation`
 
+**Tancrede: Why a POST here?**
+
 ```shell
 curl -k  -L -X POST -H 'X-
 -Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -400,6 +409,8 @@ Parameter | Description | Mandatory
 property_id | The ID of the property | *
 start | filter result with date from (yyyy-mm-dd) |
 end | filter result date to (yyyy-mm-dd) |
+
+**Tancrede: I found it useful (as a dev) to be able to filter on creation / modification date (all the reservations created or modified on that date) OR on check in OR on check out. Here filtering is not really clear**
 
 ### Notes
 
@@ -579,7 +590,7 @@ On the front-end, a technology vendor can connect to thousands of OTA's and then
 - easy onboarding (no data migration or re-mapping required)
 - easy billing (billing is handled by Booking.com)
 - direct exposure to millions of partners
-- lowered customer acquisition costs 
+- lowered customer acquisition costs
 
 ## Connectivity Endpoints
 
