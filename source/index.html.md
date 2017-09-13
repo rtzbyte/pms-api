@@ -45,17 +45,7 @@ The URL (hub-api.booking.com) will allow you to read & write into a centralized 
 
 ## PMS Connectivity Summit 2017
 
-Would you be interested in attending our PMS Connectivity Summit?
-
-During this connectivity summit, we will be bringing PMS providers from around the Globe:
-
-- to stress test our PMS connectivity API's
-- to discuss feedback on what features & builds are desirable for PMS providers
-- to discuss segments of the HUB that will help PMS's scale
-
-Come to Amsterdam with your developers on your own expense to work on an experimental API with no guarantee of commercial success.
-
-Sounds fun, right?
+https://github.com/jeffpan1/booking
 
 # Test Environments
 To start, you'll be given access to the following sandboxes:
