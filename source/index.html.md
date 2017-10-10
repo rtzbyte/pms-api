@@ -77,7 +77,7 @@ curl "api_endpoint_here"
 
 # Inventory API's
 
-The inventory API synchronizes the physicial & virtual rooms of a property with their PMS, third-party technology applications, and the OTA's that they use.
+The inventory API synchronizes the physical & virtual rooms of a property with their PMS, third-party technology applications, and the OTA's that they use.
 
 - **Physical Inventory** refers to the physical rooms inside a property & how they are laid out.
 - **Virtual Inventory** refers to the way those rooms are laid out online.  Sometimes properties choose to withhold inventory, or sometimes they'll advertise different rooms on different OTA's and at different prices.
